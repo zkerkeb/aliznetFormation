@@ -1,7 +1,14 @@
 import React from 'react'
 
+import Layout from './layout'
+
 export default class Home extends React.Component {
   render() {
-    return <p>PAge accueil</p>
+    return (
+      <Layout>
+        {' '}
+        <p>PAge accueil</p>{' '}
+      </Layout>
+    )
   }
 }

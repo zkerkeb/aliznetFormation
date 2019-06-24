@@ -11,7 +11,15 @@ export default class Login extends React.Component {
   }
 
   componentDidMount() {
+    this.checkToken()
     console.log('le composant vient de se monter')
+  }
+
+  checkToken = () => {
+    const token = localStorage.getItem('token')
+    if (token) {
+      this.props.history.push('/home')
+    }
   }
 
   verificationLogin = () => {
