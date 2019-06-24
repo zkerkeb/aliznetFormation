@@ -1,16 +1,13 @@
 import React from 'react'
 import './App.css'
 
-import Counter from './components/counter'
-import CounterProps from './components/counterProps'
+import LoginForm from './components/loginForm'
 
 class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <Counter label="Serpentard"></Counter>
-        <Counter label="Poufsouffle"></Counter>
-        <Counter label="Serdaigle"></Counter>
+        <LoginForm></LoginForm>
       </div>
     )
   }
