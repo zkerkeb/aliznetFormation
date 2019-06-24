@@ -1,15 +1,11 @@
 import React from 'react'
 import './App.css'
 
-import LoginForm from './components/loginForm'
+import Routes from './config/routes'
 
 class App extends React.Component {
   render() {
-    return (
-      <div className="App">
-        <LoginForm></LoginForm>
-      </div>
-    )
+    return <Routes></Routes>
   }
 }
 
