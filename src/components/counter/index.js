@@ -5,30 +5,19 @@ import './index.css'
 
 export default class Counter extends React.Component {
   static propTypes = {
-    label: PropTypes.string
+    label: PropTypes.string,
+    counter: PropTypes.number,
+    increment: PropTypes.func,
+    decrement: PropTypes.func
   }
-
-  state = {
-    counter: 0
-  }
-
-  increment = () => {
-    this.setState({ counter: this.state.counter + 1 })
-  }
-
-  decrement = () => {
-    this.setState({ counter: this.state.counter - 1 })
-  }
-
   render() {
-    const { label } = this.props
-    const { counter } = this.state
+    const { label, counter, increment, decrement } = this.props
     return (
       <div className="counter">
         <p>{label}</p>
         <p>{counter}</p>
-        <button onClick={this.increment}>+</button>
-        <button onClick={this.decrement}>-</button>
+        <button onClick={increment}>+</button>
+        <button onClick={decrement}>-</button>
       </div>
     )
   }

@@ -1,0 +1,7 @@
+.counter{
+  background-color: red;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}

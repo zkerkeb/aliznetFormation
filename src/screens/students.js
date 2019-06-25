@@ -21,14 +21,12 @@ export default class Students extends React.Component {
 
   getStudents = () => {
     const house = this.props.match.params.house
-    console.log(house)
     axios({
       method: 'GET',
       url: `http://hp-api.herokuapp.com/api/characters/house/${house}`
     })
       .then(res => {
         this.setState({ students: res.data })
-        console.log(res)
       })
       .catch(err => {
         console.log(err)
@@ -36,7 +34,6 @@ export default class Students extends React.Component {
   }
 
   render() {
-    console.log('Student', this.props)
     return (
       <Layout>
         <Link to="/students/slytherin">Serpentard</Link>
