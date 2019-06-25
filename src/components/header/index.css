@@ -7,4 +7,19 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  flex-direction: row;
+  padding: 12px;
+}
+
+.right-header{
+  display: flex;
+  flex: 1;
+  justify-content: flex-end;
+}
+
+
+.left-header{
+  display: flex;
+  flex: 3;
+  justify-content: center;
 }

@@ -8,7 +8,6 @@ export default class Layout extends React.Component {
       <div>
         <Header></Header>
         {this.props.children}
-        <p>Zak Copyrigt</p>
       </div>
     )
   }
