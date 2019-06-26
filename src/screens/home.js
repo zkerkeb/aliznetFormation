@@ -10,11 +10,22 @@ import allTheActions from '../actions'
 import './home.css'
 
 class Home extends React.Component {
+  componentDidMount() {
+    this.props.actions.characters.getCharacters('slytherin')
+  }
+
   render() {
-    console.log('HOME', this.props)
     const { counterState, actions } = this.props
+    console.log('props home', this.props)
     return (
       <Layout>
+        {this.props.characters.isPending ? (
+          <p>chargement en cours</p>
+        ) : this.props.characters ? (
+          this.props.characters.currentCharacters.map(student => (
+            <p>{student.name}</p>
+          ))
+        ) : null}
         <p>mon compteur global</p>
         <p>{this.props.counterState.serpentard}</p>
         <button
@@ -62,13 +73,16 @@ class Home extends React.Component {
   }
 }
 
+// les clé de la state disponible sont listé dans l'index du dossier reducers
 const mapStateToProps = state => ({
-  counterState: state.counter
+  counterState: state.counter,
+  characters: state.characters
 })
 
 const mapDispatchToProps = dispatch => ({
   actions: {
-    counter: bindActionCreators(allTheActions.counter, dispatch)
+    counter: bindActionCreators(allTheActions.counter, dispatch),
+    characters: bindActionCreators(allTheActions.characters, dispatch)
   }
 })
 

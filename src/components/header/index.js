@@ -15,9 +15,7 @@ class Header extends React.Component {
   }
 
   checkIfToken = () => {
-    this.setState({ isToken: !!localStorage.getItem('token') }, () => {
-      console.log(this.state)
-    })
+    this.setState({ isToken: !!localStorage.getItem('token') }, () => {})
   }
 
   disconnect = () => {
@@ -43,6 +41,10 @@ class Header extends React.Component {
           <MenuButtons
             onClick={() => this.handleLocation('/students/gryffindor')}
             label="Eleves"
+          />
+          <MenuButtons
+            onClick={() => this.handleLocation('/ranking')}
+            label="Classement"
           />
         </div>
         {this.state.isToken ? (
