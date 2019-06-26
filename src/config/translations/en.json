@@ -1,0 +1,21 @@
+{
+  "translation": {
+    "menu": {
+      "home": "Home",
+      "houses": "Houses",
+      "ranking": "Ranking",
+      "library": "Library",
+      "options": "Options",
+      "spells": "Spells",
+      "disconnect": "Log Out"
+    },
+    "houses": {
+      "gryffindor": "Gryffindor",
+      "slytherin": "Slytherin",
+      "ravenclaw": "Ravenclaw",
+      "hufflepuff": "Hufflepuff"
+    },
+    "numberHouse": "there is {{count}} student in the {{house}} house",
+    "numberHouse_plural": "there is {{count}} students in the {{house}} house"
+  }
+}

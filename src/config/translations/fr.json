@@ -1,0 +1,23 @@
+{
+  "translation": {
+    "menu": {
+      "home": "Acceuil",
+      "houses": "Maisons",
+      "ranking": "Classement",
+      "library": "Bibliothéque",
+      "spells": "Sorts",
+      "options": "Options",
+      "disconnect": "Deconnexion"
+    },
+    "houses": {
+      "gryffindor": "Gryffondor",
+      "slytherin": "Serpentard",
+      "ravenclaw": "Serdaigle",
+      "hufflepuff": "Poufsouffle"
+    },
+    "numberHouse": "il y a {{count}} eleve dans la maison {{house}}",
+    "numberHouse_plural": "il y a {{count}} eleves dans la maison {{house}}"
+  }
+}
+
+
